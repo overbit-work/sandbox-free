@@ -26,6 +26,28 @@ class UserUpdateInput {
   @Field(() => String, {
     nullable: true,
   })
+  firstName?: string | null;
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  lastName?: string | null;
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
   username?: string;
 
   @ApiProperty({
@@ -58,18 +80,7 @@ class UserUpdateInput {
   @Field(() => String, {
     nullable: true,
   })
-  firstName?: string | null;
-
-  @ApiProperty({
-    required: false,
-    type: String,
-  })
-  @IsString()
-  @IsOptional()
-  @Field(() => String, {
-    nullable: true,
-  })
-  lastName?: string | null;
+  role_Id?: string | null;
 }
 
 export { UserUpdateInput as UserUpdateInput };
